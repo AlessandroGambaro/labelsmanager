@@ -23,6 +23,8 @@ function App() {
     <div className="App" >
       <h2>{LanguageManager.getLabel(labels, label, 'default_ demoLabel')}</h2>
       <br />
+      <h2>{LanguageManager.getLabel(labels, 'boooo', 'booo default')}</h2>
+      <br />
       <button onClick={() => setValue(!value)}>Change label</button>
     </div>
   );
