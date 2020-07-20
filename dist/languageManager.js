@@ -1,5 +1,3 @@
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 import _ from 'lodash';
 /**
  * import languageManager from '../language/languageManager';
@@ -7,12 +5,18 @@ import _ from 'lodash';
  */
 
 class LanguageManager {
-  static getLabel(id, defaultValue) {
-    if (_.isNil(LanguageManager._labels)) console.error('No labels!');
+  /**
+   * 
+   * @param {This should be in the Global APP state} labels 
+   * @param {Label id} id 
+   * @param {Default value if label id is not present} defaultValue 
+   */
+  static getLabel(labels, id, defaultValue) {
+    if (_.isNil(labels)) console.error('No labels!');
 
     try {
       const splits = id.split('.');
-      let message = LanguageManager._labels;
+      let message = labels;
 
       for (let index = 0; index < splits.length; index++) {
         const element = splits[index];
@@ -26,24 +30,23 @@ class LanguageManager {
     }
   }
   /**
-   * Labels: { myobje: {
-   *               internalValue: {
-   *                  value: 'My Label'
-   *               }
-   *           }
-   *        }
-   * 
-   * 
-   * @param {Object with the dictionary} labels 
+   * @param {ex-IT, en-US, etc} locale 
    */
 
 
-  static setLabels(labels) {
-    LanguageManager._labels = labels;
+  static loadLabels(locale = 'en-US') {
+    const fileToBeLoaded = './labels/' + locale + '.json';
+    return fetch(fileToBeLoaded, {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8"
+      }
+    }).then(res => res.json()).then(response => {
+      return response;
+    }).catch(err => {
+      console.log("Problem loading the Site Labels");
+    });
   }
 
 }
-
-_defineProperty(LanguageManager, "_labels", {});
 
 export default LanguageManager;

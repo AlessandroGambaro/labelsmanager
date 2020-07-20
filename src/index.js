@@ -3,18 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { LanguageManager } from './lib/index';
-
-LanguageManager.setLabels({
-  demo: {
-    label_01: "Demo Label 01",
-    label_02: "Demo Label 02"
-  },
-  anotherContext: {
-
-  }
-});
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
