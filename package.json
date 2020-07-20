@@ -1,0 +1,50 @@
+{
+  "name": "labels-manager",
+  "version": "0.1.0",
+  "description": "labels-manager",
+  "author": "alessandro gambaro",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/cli": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "7.10.4",
+    "react-scripts": "3.4.1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "distribute": "rmdir /s /q dist & mkdir dist && npx babel src/lib -d dist --copy-files",
+    "start": "react-scripts start"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

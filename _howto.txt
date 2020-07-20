@@ -1,0 +1,21 @@
+
+
+    1. Create a project with create react app
+    2. Delete css files and useless js files (just leave app index serviceWorker)
+    3. Add lib folder and create a new component
+    4. configure distribute script in package.json
+    5. Create peerDependencies (all dependences needed by the component)
+    6. Create the package: npm run distribute
+    7. Add your user: npm adduser
+    7. Check the version: npm version
+    9. npm publish 
+
+
+
+References
+
+    - Package and Distribute Your Own React-Component created by Create-React-App
+        https://medium.com/@tofusoup429/package-and-distribute-your-own-react-component-created-by-create-react-app-4fcf1bd4fdaa
+
+    - Creating your first npm package 
+        https://dev.to/therealdanvega/creating-your-first-npm-package-2ehf#:~:text=%20Creating%20your%20first%20npm%20package%20%201,Studio%20Code%20and%20create%20index.js.%20The...%20More%20
