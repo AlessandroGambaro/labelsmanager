@@ -5,7 +5,7 @@
   "author": "alessandro gambaro",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "",
+  "repository": "https://github.com/AlessandroGambaro/labelsmanager",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/cli": "^7.10.5",
