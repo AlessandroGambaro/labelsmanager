@@ -1,7 +1,7 @@
 {
   "name": "labels-manager",
-  "version": "0.2.2",
-  "description": "labels-manager",
+  "version": "0.2.6",
+  "description": "This is a very simple library you can use to manage your multilanguage in your app.",
   "author": "alessandro gambaro",
   "license": "MIT",
   "main": "dist/index.js",
