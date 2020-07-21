@@ -37,6 +37,9 @@ npm i labels-manager
  
  4. Show a label in code
   ```javascript
+  const [value, setValue] = useState(true);
+  const label = value ? 'demo.label_01' : 'demo.label_02';
+  ...
   {LanguageManager.getLabel(labels, label, 'default_ demoLabel')}
   ```
 

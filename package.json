@@ -1,6 +1,6 @@
 {
   "name": "labels-manager",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "description": "This is a very simple library you can use to manage your multilanguage in your app.",
   "author": "alessandro gambaro",
   "license": "MIT",
@@ -16,10 +16,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
-  "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
+  "peerDependencies": {},
   "scripts": {
     "distribute": "rmdir /s /q dist & mkdir dist && npx babel src/lib -d dist --copy-files",
     "start": "react-scripts start"
