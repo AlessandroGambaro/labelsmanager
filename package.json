@@ -1,6 +1,6 @@
 {
   "name": "labels-manager",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "description": "This is a very simple library you can use to manage your multilanguage in your app.",
   "author": "alessandro gambaro",
   "license": "MIT",
