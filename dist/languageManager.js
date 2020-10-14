@@ -5,7 +5,7 @@ class LanguageManager {
    * @param {Default value if label id is not present} defaultValue 
    */
   static getLabel(labels, id, defaultValue) {
-    if (labels !== null && labels !== undefined) console.error('No labels!');
+    if (labels === null || labels === undefined) return defaultValue || '';
 
     try {
       const splits = id.split('.');
